@@ -113,8 +113,10 @@ window.onload = function () {
         textSubstitution();
       }
     });
-    myMap.destroy();
-    init();
+    setTimeout(function () {
+      myMap.destroy();
+      init()
+    },500)
   };
   function findChildren(item) {
     var children = activePoint(item).querySelectorAll('.pick-up-point');
